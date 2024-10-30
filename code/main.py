@@ -117,6 +117,7 @@ class SAESApp(QWidget):
 
         self.format_combo_decrypt = QComboBox()
         self.format_combo_decrypt.addItems(["ASCII", "二进制"])
+        self.format_combo_decrypt.setMinimumHeight(30) 
         layout.addWidget(self.format_combo_decrypt)
 
         self.decrypt_button = QPushButton("解密")
