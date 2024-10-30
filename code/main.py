@@ -1,5 +1,5 @@
 import sys
-from PyQt5 import QtWidgets, QtGui
+from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import (
     QLabel, QLineEdit, QPushButton,
     QVBoxLayout, QHBoxLayout, QWidget,
@@ -15,7 +15,11 @@ class SAESApp(QWidget):
     def init_ui(self):
         self.setWindowTitle("S-AES 加解密系统")
         self.setGeometry(100, 100, 600, 400)
-        self.setStyleSheet("background-color: #f0f0f0;")
+        self.setStyleSheet("""
+            background-color: #f7f7f9;
+            color: #333;
+            font-family: Arial;
+        """)
 
         self.stacked_widget = QStackedWidget()
 
@@ -28,13 +32,28 @@ class SAESApp(QWidget):
         self.stacked_widget.addWidget(self.encrypt_widget)
         self.stacked_widget.addWidget(self.decrypt_widget)
 
-        # 切换按钮
         self.switch_button_layout = QHBoxLayout()
         self.encrypt_button = QPushButton("加密")
-        self.encrypt_button.clicked.connect(self.show_encrypt)
         self.decrypt_button = QPushButton("解密")
-        self.decrypt_button.clicked.connect(self.show_decrypt)
 
+        for button in [self.encrypt_button, self.decrypt_button]:
+            button.setStyleSheet("""
+                QPushButton {
+                    background-color: #4CAF50;
+                    color: white;
+                    font-size: 14px;
+                    padding: 10px 20px;
+                    border-radius: 8px;
+                }
+                QPushButton:hover {
+                    background-color: #45a049;
+                }
+            """)
+            button.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        
+        self.encrypt_button.clicked.connect(self.show_encrypt)
+        self.decrypt_button.clicked.connect(self.show_decrypt)
+        
         self.switch_button_layout.addWidget(self.encrypt_button)
         self.switch_button_layout.addWidget(self.decrypt_button)
 
@@ -60,6 +79,7 @@ class SAESApp(QWidget):
 
         self.format_combo = QComboBox()
         self.format_combo.addItems(["ASCII", "二进制"])
+        self.format_combo.setMinimumHeight(30) 
         layout.addWidget(self.format_combo)
 
         self.encrypt_button = QPushButton("加密")
@@ -68,9 +88,15 @@ class SAESApp(QWidget):
         layout.addWidget(self.encrypt_button)
 
         self.result_text = QTextEdit()
+        self.result_text.setReadOnly(True)
         self.result_text.setFixedHeight(100)
         self.result_text.setFont(QtGui.QFont("Arial", 12))
-        self.result_text.setStyleSheet("background-color: #e0e0e0;")
+        self.result_text.setStyleSheet("""
+            background-color: #e8e8e8;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        """)
         layout.addWidget(self.result_text)
 
         self.encrypt_widget.setLayout(layout)
@@ -99,9 +125,15 @@ class SAESApp(QWidget):
         layout.addWidget(self.decrypt_button)
 
         self.result_text_decrypt = QTextEdit()
+        self.result_text_decrypt.setReadOnly(True)
         self.result_text_decrypt.setFixedHeight(100)
         self.result_text_decrypt.setFont(QtGui.QFont("Arial", 12))
-        self.result_text_decrypt.setStyleSheet("background-color: #e0e0e0;")
+        self.result_text_decrypt.setStyleSheet("""
+            background-color: #e8e8e8;
+            color: #333;
+            padding: 10px;
+            border-radius: 8px;
+        """)
         layout.addWidget(self.result_text_decrypt)
 
         self.decrypt_widget.setLayout(layout)
@@ -147,7 +179,6 @@ class SAESApp(QWidget):
             plaintext = decrypt_ascii(ciphertext, key)  
 
         self.result_text_decrypt.setPlainText("明文: " + plaintext)
-
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
