@@ -66,7 +66,7 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 
 3. 中间相遇攻击
 代码见middle_attack.py
-![image](https://github.com/user-attachments/assets/97874201-c05f-4518-9822-e7822eb39c4c)
+![image](https://github.com/user-attachments/assets/22ad1b4f-7e42-478a-a993-7348431e24b8)
 
 
 5. 三重加密
@@ -84,7 +84,7 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 
 
 
-### 第5关：工作模式
+### 工作模式
 代码实现见CBC.py  
 运行结果
 
