@@ -29,12 +29,15 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 
 ### 第1关 基础测试
 测试明文 `0000000000001111`，密钥 `1111111111110000` 进行加密解密，使用解密结果查看加密解密流程是否有误。
+![image](https://github.com/user-attachments/assets/188f9433-56f8-4245-94cf-248af81781e0)
 
 #### 加密结果
-![加密结果]
+![image](https://github.com/user-attachments/assets/caeede58-fbe5-4145-92dd-9ed6d4e987b6)
+
 
 #### 解密结果
-![解密结果]
+![image](https://github.com/user-attachments/assets/75d42ff5-55e9-44bc-b0c4-684ec06cd1ef)
+
 
 ### 第2关 交叉测试
 #### 其他小组加密结果
@@ -46,21 +49,35 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 
 ### 第3关 对ASCII字符串进行加密解密
 #### 加密结果
-![ASCII字符串加密结果]
+![image](https://github.com/user-attachments/assets/f10b6f5d-e532-4292-a17f-37a56ce7cb4c)
+
 
 #### 解密结果
-![ASCII字符串解密结果]
+![image](https://github.com/user-attachments/assets/9ed6cc56-5fd0-4947-9cc6-2e9d14265775)
+
 
 
 ### 第4关：多重加密
 1. 双重加密
 代码见double.py
+![image](https://github.com/user-attachments/assets/cb5cfbe9-ae63-4969-aefa-181119b373b9)
+加密：
+![image](https://github.com/user-attachments/assets/c109bae0-0bc7-4198-bbb5-ee13799019a4)
+解密：
+![image](https://github.com/user-attachments/assets/8873942b-1592-43c5-b23b-29859d6d26f3)
 
-2. 中间相遇攻击
+
+3. 中间相遇攻击
 代码见middle_attack.py
 
-3. 三重加密
+4. 三重加密
 代码见threeford.py
+![image](https://github.com/user-attachments/assets/1765eb49-6968-4c96-b4fd-72ff85b5e63f)
+加密：
+![image](https://github.com/user-attachments/assets/7204987c-ceec-49da-a516-ca46818e79d7)
+解密：
+![image](https://github.com/user-attachments/assets/898403ba-1f26-4787-b90e-87a7f4d9b82a)
+
 
 
 ### 第5关：工作模式
