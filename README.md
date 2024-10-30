@@ -88,6 +88,9 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 代码实现见CBC.py  
 运行结果
 
+![7ad44dc07e2c46f9e4cc6d2191aa11a7](https://github.com/user-attachments/assets/61807c03-396a-4bf3-9514-a312b3d15763)
+
+
 
 
 ## 总结
