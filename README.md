@@ -64,9 +64,11 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 ![image](https://github.com/user-attachments/assets/cb5cfbe9-ae63-4969-aefa-181119b373b9)
 
 加密：
+
 ![image](https://github.com/user-attachments/assets/c109bae0-0bc7-4198-bbb5-ee13799019a4)
 
 解密：
+
 ![image](https://github.com/user-attachments/assets/8873942b-1592-43c5-b23b-29859d6d26f3)
 
 
@@ -79,9 +81,11 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 ![image](https://github.com/user-attachments/assets/1765eb49-6968-4c96-b4fd-72ff85b5e63f)
 
 加密：
+
 ![image](https://github.com/user-attachments/assets/7204987c-ceec-49da-a516-ca46818e79d7)
 
 解密：
+
 ![image](https://github.com/user-attachments/assets/898403ba-1f26-4787-b90e-87a7f4d9b82a)
 
 
