@@ -60,6 +60,7 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 ### 第4关：多重加密
 1. 双重加密
 代码见double.py
+
 ![image](https://github.com/user-attachments/assets/cb5cfbe9-ae63-4969-aefa-181119b373b9)
 加密：
 ![image](https://github.com/user-attachments/assets/c109bae0-0bc7-4198-bbb5-ee13799019a4)
@@ -72,6 +73,7 @@ S-AES（Simplified AES）是一种简化的高级加密标准，主要用于教�
 
 4. 三重加密
 代码见threeford.py
+
 ![image](https://github.com/user-attachments/assets/1765eb49-6968-4c96-b4fd-72ff85b5e63f)
 加密：
 ![image](https://github.com/user-attachments/assets/7204987c-ceec-49da-a516-ca46818e79d7)
